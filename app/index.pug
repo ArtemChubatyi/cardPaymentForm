@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Document
+        link(rel="stylesheet", href="css/main.min.css")
+    body
+        .wrapper
+            .form-header
+                span.title Pay Invoice
+            form(name="form", )
+                .valid-cards
+                    .valid-cards__item(style="background-image: url(img/visa.gif)")
+                    .valid-cards__item(style="background-image: url(img/mastercard.png)")
+                    .valid-cards__item(style="background-image: url(img/amex.png)")
+                    .valid-cards__item(style="background-image: url(img/discover.png)")
+                .field-wrapp
+                    label(for="amount") Payment amount
+                    .inner-wrap.payment-amount
+                        span.dollar $
+                        input(type="text" value="500" disabled name="amount" id="amount" pattern="[0-9]{1,5}")
+                        button.button.button__edit(type="button") Edit
+                .field-wrapp.name
+                    label(for="name") Name on card
+                    input(type="text" name="name" id="name" pattern="[A-Z a-z]{4,20}")
+                .field-wrapp.card
+                    label(for="card-number") Card number
+                    input(type="text" name="card-number" id="card-number" pattern="[0-9]{13,16}")
+                .field-wrapp.flex
+                    .inner-wrapper.date
+                        label(for="expiry-date") Expiry date
+                        input(type="text" name="expiry-date" id="expiry-date" placeholder="MM/YY" pattern="[0|1][0-9][/][1|2][0-9]")
+                    .inner-wrapper.code
+                        label(for="security-code") Security code
+                        input(type="text" id="security-code" name="security-code" pattern="[0-9]{3}")
+                .field-wrapp.flex
+                    input(type="checkbox" name="store" id="store")
+                    label(class="store" for="store") Store the card
+                .field-wrapp.email-field(style="display: none")
+                    label(class="email" for="email") Your Email
+                    input(type="email" name="email" id="email")
+                .field-wrapp.last-row
+                    button.button.button__submit(type="submit")
+                        i.icon
+                        span.pay Pay $500.00
+
+        script(src="js/scripts.min.js")
+
+                    
+                    
