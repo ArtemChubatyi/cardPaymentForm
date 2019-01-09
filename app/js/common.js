@@ -137,7 +137,7 @@ function GetPaymentForm() {
 		let errorClass = document.querySelector('.date-error');
 		if (!event.target.validity.valid && errorClass === null) {
 			let fieldError = document.createElement('div');
-			fieldError.innerText = 'Enter a date in format MM/YY';
+			fieldError.innerText = 'Enter a date in format MM/YYYY';
 			fieldError.classList.add('date-error');
 			fieldWrap.appendChild(fieldError);
 		} else if (event.target.validity.valid && errorClass !== null) {
